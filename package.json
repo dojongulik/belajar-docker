@@ -1,0 +1,76 @@
+{
+  "name": "typescript-express-template",
+  "version": "0.0.1",
+  "description": "TypeScript and Express Project Template",
+  "main": "build/src/server.js",
+  "types": "build/src/server.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "scripts": {
+    "test": "ava --timeout=30s --verbose",
+    "pretest": "eslint **/*.ts",
+    "build": "tsc -p .",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "node build/src/server.js",
+    "dev": "TS_NODE_FILES=true ts-node src/server.ts",
+    "lint": "eslint **/*.ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garasingulik/typescript-express-template.git"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "template",
+    "bootstrap",
+    "skeleton"
+  ],
+  "author": "Indra Gunawan <indra@garasingulik.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garasingulik/typescript-express-template/issues"
+  },
+  "homepage": "https://github.com/garasingulik/typescript-express-template#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fp-ts": "^2.9.5",
+    "io-ts": "^2.2.15",
+    "io-ts-reporters": "^1.2.2",
+    "tswrap": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "ava": "^3.15.0",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "husky": "^4.3.8",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "ava": {
+    "files": [
+      "./test/**/*.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  }
+}
