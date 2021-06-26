@@ -6,9 +6,8 @@ import { authenticationMiddleware } from './authorization'
 
 export const DefaultRoutes = {
   register: (app: express.Application) => {
-
-    app.get('/ping', (req, res) => {
-      res.sendStatus(200)
+    app.get('/', (req, res) => {
+      res.json({ message: 'OK' })
     })
 
     app.post('/hello', authenticationMiddleware, (req, res) => {

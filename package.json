@@ -1,5 +1,5 @@
 {
-  "name": "typescript-express-template",
+  "name": "belajar-docker",
   "version": "0.0.1",
   "description": "TypeScript and Express Project Template",
   "main": "build/src/server.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garasingulik/typescript-express-template.git"
+    "url": "git+https://github.com/dojongulik/belajar-docker.git"
   },
   "keywords": [
     "typescript",
@@ -28,12 +28,12 @@
     "bootstrap",
     "skeleton"
   ],
-  "author": "Indra Gunawan <indra@garasingulik.com>",
+  "author": "Indra Gunawan <indra@dojongulik.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/garasingulik/typescript-express-template/issues"
+    "url": "https://github.com/dojongulik/belajar-docker/issues"
   },
-  "homepage": "https://github.com/garasingulik/typescript-express-template#readme",
+  "homepage": "https://github.com/dojongulik/belajar-docker#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
